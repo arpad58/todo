@@ -10,9 +10,55 @@
 </head>
 
 <body>
+    <div class="todo__container">
 
-    <i class="fa fa-plus"></i>
+        <div class="todo__content">
+            <!-- Header -->
+            <h1>Daily To-Do list manager</h1>
 
+            <div class="todo__form">
+                <!-- Name of this day. -->
+                <h3 class="day">Tuesday</h3>
+
+                <!-- Date -->
+                <h3 class="date">10-15-2020</h3>
+
+                <!-- Insert new todo element -->
+                <div class="insert">
+                    <input type="text" name="" id="">
+                    <button>
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+
+                <!-- Display todos -->
+                <p>You have <span class="todo__number">0</span> pending items</p>
+
+                <!-- Todo list pending -->
+                <div class="todo__list--pending">
+
+                </div>
+
+                <!-- Todo list done -->
+                <div class="todo__list--done">
+
+                </div>
+
+                <!-- Footer menü -->
+                <div class="todo__footer">
+                    <button class="footer__btn--complete">
+                        Show Complete
+                    </button>
+                    <button class="footer__btn--clear">
+                        Clear All
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="js/main.js"></script>
 </body>

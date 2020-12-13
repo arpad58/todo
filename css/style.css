@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+body {  
+    font-family: sans-serif;
+    background-color: rgb(255, 67, 67);
+    color: rgba(0, 0, 0,.4);
+    min-height: 100vh;
+}
+
+h1 {
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+h3 {
+    color: rgba(255,0,0, .5);
+    font-weight: 500;
+}
+p {
+    margin: 0.5rem 0;
+}
+.form__day {
+    margin-top: .1rem;
+}
+
+.todo__form {
+    width: 25rem;
+    height: 80vh;
+    margin: .5rem auto;  
+    padding: 1.5rem;
+    background-color: #ececec;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.insert {
+    margin-top: 1rem;
+    display: flex;
+}
+.todo__input {
+    padding: .5rem;
+    padding-left: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid rgba(0, 0, 0,.3);
+    border-radius: 3px;
+    font-size: .8rem;
+    font-style: italic;
+    color: rgba(0, 0, 0,.3);
+    flex: 1;   
+}
+
+.todo__btn {
+    width: 3rem;
+}

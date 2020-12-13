@@ -1,4 +1,3 @@
-
 // 1.  Fdeladat: Az alkalmazás localStorage-ben tárolja a teendőket.
 
 (function () {
@@ -17,6 +16,7 @@
     const todoAddBtn = document.querySelector('.todo__btn');
     const todoInput = document.querySelector('.todo__input');
     const todoListPending = document.querySelector('.todo__list--pending');
+    const todoNumberDisplayer = document.querySelector('.todo__number');             // aktuális todo k száma span
 
     const dayNames = [
         'Sunday',
@@ -106,6 +106,9 @@
         if (todos && Array.isArray(todos)) {
             // Ha létezik a todos és tömb akkor lép csak be a következő sorba
             todos.forEach(todo => showTodo(todo));  // Ha indul az alkalmazás, a meglévő todo k már láthatóak
+            todos.forEach(todos => updateTodoNumber(todos.length));
+            console.log(todos.length);
+
         }
     };
 
@@ -141,6 +144,7 @@
     // Hogy lefusson ez a függvény, a const initben kell meghívni 
     const setListeners = () => {
         todoAddBtn.addEventListener('click', addNewTodo);
+        todoAddBtn.addEventListener('click', updateTodoNumber);
     };
 
 
@@ -214,6 +218,11 @@
 
     };
 
+    const updateTodoNumber = (number) => {
+        todoNumberDisplayer.textContent = (todos.length);
+
+    };
+
     init();  // Itt a legvégén hívjuk meg az initet. Akkor fut le, mikor indul a program
 
 })();
@@ -232,3 +241,4 @@
 //}
 // És csak akkor fog a kódunk továbbmenni a követkző sorra 
 // return JSON.parse(value); ami JSON parse t ad vissza, ha van value.
+

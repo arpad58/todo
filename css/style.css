@@ -23,11 +23,13 @@ h1 {
 }
 h3 {
     color: rgba(255,0,0, .5);
-    font-weight: 500;
+    font-weight: 300;
 }
+
 p {
     margin: 0.5rem 0;
 }
+
 .form__day {
     margin-top: .1rem;
 }
@@ -41,8 +43,7 @@ p {
     border-radius: 3px;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 
 .insert {
@@ -53,7 +54,7 @@ p {
     padding: .5rem;
     padding-left: 0.5rem;
     margin-right: 0.5rem;
-    border: 1px solid rgba(0, 0, 0,.3);
+    border: 1px solid rgba(110, 110, 110, 0.3);
     border-radius: 3px;
     font-size: .8rem;
     font-style: italic;
@@ -63,4 +64,30 @@ p {
 
 .todo__btn {
     width: 3rem;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0,.1);
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer__btn--complete,
+.footer__btn--clear {
+    border: none;
+    background: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3px;
+}
+
+.todo__list--pending {
+    flex: 1;
+}
+
+.todo__footer {
+    display: flex;
+    justify-content: center;
 }
